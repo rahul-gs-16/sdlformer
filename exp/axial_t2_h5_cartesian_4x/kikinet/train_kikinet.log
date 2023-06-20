@@ -1,0 +1,43 @@
+INFO:root:Namespace(acceleration_factor=None, batch_size=1, data_parallel=False, dataset_type=None, device='cuda:0', exp_dir=PosixPath('/home/fahim/mc_kikinet/exp/axial_t2_h5_cartesian_4x/kikinet'), lr=0.001, lr_gamma=0.1, lr_step_size=40, nc=1, num_epochs=150, report_interval=100, seed=42, train_path='/media/Data/MRI/datasets/multicoil/mc_knee/axial_t2_h5/cartesian/acc_4x/train/', validation_path='/media/Data/MRI/datasets/multicoil/mc_knee/axial_t2_h5/cartesian/acc_4x/validation/', weight_decay=0.0)
+INFO:root:KIKInet(
+  (image_model_list): ModuleList(
+    (0): cnn_layer(
+      (conv): Sequential(
+        (0): Conv2d(2, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (2): ReLU(inplace=True)
+        (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (4): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (5): ReLU(inplace=True)
+        (6): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (7): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (8): ReLU(inplace=True)
+        (9): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (10): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (11): ReLU(inplace=True)
+        (12): Conv2d(64, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  (kspace_model_list): ModuleList(
+    (0): MultiCoil(
+      (model): cnn_layer(
+        (conv): Sequential(
+          (0): Conv2d(2, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (4): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (5): ReLU(inplace=True)
+          (6): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (7): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (8): ReLU(inplace=True)
+          (9): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (10): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (11): ReLU(inplace=True)
+          (12): Conv2d(64, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+      )
+    )
+  )
+)
